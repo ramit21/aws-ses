@@ -4,11 +4,11 @@ const fs = require('fs');
 //AWS.config.loadFromPath('./config.json');
 AWS.config.update({ region: 'us-east-1' });
 
-let sendMail = (template) => {
+let sendMail = (to, template) => {
 	// Create sendEmail params
 	var params = {
 		Destination: {
-			ToAddresses: [ '21.ramit@gmail.com' ]
+			ToAddresses: [ to ]
 		},
 		Message: {
 			/* required */
@@ -43,6 +43,6 @@ let sendMail = (template) => {
 };
 
 fs.readFile("template.html", "utf8", function(err, data) {
-     sendMail(data);
+     sendMail('21.ramit@gmail.com',data);
 });
 
