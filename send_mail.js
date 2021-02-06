@@ -1,11 +1,10 @@
 const AWS = require('aws-sdk');
 const fs = require('fs');
 
-//AWS.config.loadFromPath('./config.json');
+AWS.config.loadFromPath('./config.json');
 AWS.config.update({ region: 'us-east-1' });
 
 let sendMail = (to, template) => {
-	// Create sendEmail params
 	var params = {
 		Destination: {
 			ToAddresses: [ to ]
@@ -13,7 +12,6 @@ let sendMail = (to, template) => {
 		Message: {
 			/* required */
 			Body: {
-				/* required */
 				Html: {
 					Charset: 'UTF-8',
 					Data: template
