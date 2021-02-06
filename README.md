@@ -15,4 +15,4 @@ SES by default works in Sandbox mode which has few restrictions. Refer this link
 
 https://docs.aws.amazon.com/ses/latest/DeveloperGuide/request-production-access.html
 
-In Sandbox mode, the 'to' address can only be from emails registered with SES. Be it sandbox or regular account, 'From' address is always from registered email addresses.
+In Sandbox mode, the 'to' address can only be from emails registered with SES. However, the 'From' address is always from registered email addresses, be it sandbox or regular account.
