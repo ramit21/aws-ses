@@ -32,3 +32,7 @@ policy = <<EOF
 EOF
 
 }
+
+resource "aws_ses_email_identity" "permitted_from_email" {
+  email = "21.ramit@gmail.com"
+}
