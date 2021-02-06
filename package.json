@@ -1,0 +1,11 @@
+{
+  "name": "aws-ses-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "node send_mail.js"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.839.0"
+  }
+}
