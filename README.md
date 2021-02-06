@@ -9,7 +9,7 @@ terraform init
 terraform plan
 terraform apply
 ```
-2. Configure the access keys of this user in config.json, along with region of SES being used.
+2. Configure the region and the access keys of user created above in config.json. Take the secret access key of the user from terraform state file.
 3. Register the email addresses and verify them.
 
 Execute mail sending code:

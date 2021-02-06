@@ -32,7 +32,3 @@ policy = <<EOF
 EOF
 
 }
-
-output "secret" {
-  value = aws_iam_access_key.mail_sender.encrypted_secret
-}
