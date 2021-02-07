@@ -32,4 +32,4 @@ https://docs.aws.amazon.com/ses/latest/DeveloperGuide/request-production-access.
 
 In Sandbox mode, the 'to' address can only be from emails registered with SES. However, the 'From' address is always from registered email addresses, be it sandbox or regular account.
 
-You can verify mails one by one, or create a domain and verify it instead.
+You can verify mails one by one, or create a domain and verify it instead. When you verify an entire domain, you are verifying all email addresses from that domain
