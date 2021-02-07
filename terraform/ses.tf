@@ -36,3 +36,10 @@ EOF
 resource "aws_ses_email_identity" "permitted_from_email" {
   email = "21.ramit@gmail.com"
 }
+
+resource "aws_ses_template" "MyTemplate" {
+  name    = "MyTemplate"
+  subject = "Greetings, {{name}}!"
+  html    = "<h1 style='color:blue'>Hello {{name}}</h1>"
+  text    = "Hello {{name}}"
+}
