@@ -37,4 +37,6 @@ You can verify mails one by one, or create a domain and verify it instead. When 
 
 https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ses_domain_identity
 
-The terraform link above creates a domain example.com, and registers it with R53. Before running this, create a R53 hosted zone, and give the zone_id in terraform field zone_id. Once all this is done, verify on SES console that your domain is marked as 'Verfified'. Now change the sender address in send_email.js with say user@example.com, and see the latter marked as sender of the mail.
+The terraform link above creates a domain example.com, and registers it with R53. Before running this, create a R53 hosted zone, and give the zone_id in terraform field zone_id. Once all this is done, verify on SES console that your domain is marked as 'Verfified'. Now change the sender address in send_email.js with say user@example.com, and see the latter marked as sender of the mail. You can also verify DKIM so that mails don't land in the junk folder.
+
+https://docs.aws.amazon.com/ses/latest/DeveloperGuide/verify-domains.html
