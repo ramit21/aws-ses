@@ -32,4 +32,9 @@ https://docs.aws.amazon.com/ses/latest/DeveloperGuide/request-production-access.
 
 In Sandbox mode, the 'to' address can only be from emails registered with SES. However, the 'From' address is always from registered email addresses, be it sandbox or regular account.
 
-You can verify mails one by one, or create a domain and verify it instead. When you verify an entire domain, you can then use any sub-domain as the mail sender (eg user1@mydomain.com for the verfified domain mydomain.com)
+## SES Domain Registration
+You can verify mails one by one, or create a domain and verify it instead. When you verify an entire domain, you can then use any sub-domain as the mail sender (eg user1@mydomain.com for the verfified domain mydomain.com). To register your domain, you need to add the domain as a TXT record with your DNS provider (R53 or third party) with the name '_amazonses', and the token of the ses domain. 
+
+https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ses_domain_identity
+
+The terraform link above creates a domain example.com, and registers it with R53. Before running this, create a R53 hosted zone, and give the zone_id in terraform field zone_id. Once all this is done, verify on SES console that your domain is marked as 'Verfified'. Now change the sender address in send_email.js with say user@example.com, and see the latter marked as sender of the mail.
