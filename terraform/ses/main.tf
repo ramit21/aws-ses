@@ -1,3 +1,4 @@
+## SES Setup
 resource "aws_iam_user" "mail_sender" {
   name = "mail_sender"
   tags = {

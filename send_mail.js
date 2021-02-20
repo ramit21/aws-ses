@@ -1,7 +1,7 @@
 const AWS = require('aws-sdk');
 const fs = require('fs');
 
-AWS.config.loadFromPath('./config.json');
+//AWS.config.loadFromPath('./config.json');
 AWS.config.update({ region: 'us-east-1' });
 
 const sendMailUsingTemplate = (to, data) => {

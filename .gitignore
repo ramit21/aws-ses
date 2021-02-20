@@ -104,6 +104,8 @@ dist
 .tern-port
 
 # Terraform
-terraform/.terraform
-terraform/terraform.tfstate
+**/.terraform
+**/*.tfstate
 terraform/terraform.tfstate.backup
+
+**/*.DS_Store
